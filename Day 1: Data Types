@@ -1,0 +1,15 @@
+i = 4
+d = 4.0
+s = "HackerRank "
+
+input_i = int(input())
+input_d = float(input())
+input_s = input()
+
+sum_i = i + input_i
+sum_d = d + input_d
+concat_s = s + input_s
+
+print(sum_i)
+print(format(sum_d, ".1f"))
+print(concat_s)
