@@ -1,0 +1,21 @@
+def solve(meal_cost, tip_percent, tax_percent):
+    # Calculate tip amount
+    tip = meal_cost * (tip_percent / 100)
+    # Calculate tax amount
+    tax = meal_cost * (tax_percent / 100)
+    # Calculate total cost
+    total_cost = meal_cost + tip + tax
+    # Round the total cost to the nearest integer
+    rounded_cost = round(total_cost)
+
+    # Print the rounded cost
+    print(rounded_cost)
+
+
+# Read input from stdin
+meal_cost = float(input())
+tip_percent = int(input())
+tax_percent = int(input())
+
+# Call the solve function with the input values
+solve(meal_cost, tip_percent, tax_percent)
