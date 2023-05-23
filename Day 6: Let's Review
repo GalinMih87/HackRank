@@ -1,0 +1,13 @@
+# Number of test cases
+t = int(input())
+
+for _ in range(t):
+    # Read the input string
+    s = input()
+    
+    # Extract even-indexed and odd-indexed characters
+    even_chars = s[::2]
+    odd_chars = s[1::2]
+    
+    # Print the result
+    print(even_chars, odd_chars)
