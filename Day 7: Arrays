@@ -1,0 +1,8 @@
+# Read the size of the array
+n = int(input())
+
+# Read the elements of the array
+arr = list(map(int, input().split()))
+
+# Print the elements in reverse order
+print(*arr[::-1])
