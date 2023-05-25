@@ -1,0 +1,28 @@
+def hourglass_sum(arr):
+    max_sum = float('-inf')  # Initial value for the maximum sum
+    rows = len(arr)
+    cols = len(arr[0])
+
+    for i in range(rows - 2):  # Iterate up to the second-to-last row
+        for j in range(cols - 2):  # Iterate up to the second-to-last column
+            # Calculate the sum of the current hourglass
+            current_sum = (
+                arr[i][j] + arr[i][j + 1] + arr[i][j + 2] +
+                arr[i + 1][j + 1] +
+                arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2]
+            )
+            # Update the maximum sum if necessary
+            if current_sum > max_sum:
+                max_sum = current_sum
+
+    return max_sum
+
+# Read the input
+arr = []
+for _ in range(6):
+    row = list(map(int, input().split()))
+    arr.append(row)
+
+# Call the function and print the result
+result = hourglass_sum(arr)
+print(result)
