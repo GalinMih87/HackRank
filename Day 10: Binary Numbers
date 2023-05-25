@@ -1,0 +1,21 @@
+def max_consecutive_ones(n):
+    binary = bin(n)[2:]  # Convert n to binary representation and remove the '0b' prefix
+    max_ones = 0
+    current_ones = 0
+
+    for digit in binary:
+        if digit == '1':
+            current_ones += 1
+            if current_ones > max_ones:
+                max_ones = current_ones
+        else:
+            current_ones = 0
+
+    return max_ones
+
+# Read the number n from input
+n = int(input())
+
+# Call the function and print the result
+result = max_consecutive_ones(n)
+print(result)
